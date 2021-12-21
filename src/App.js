@@ -1,9 +1,12 @@
 import './App.css';
+import JournalPage from './components/JournalPage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      hi
+     <Navbar />
+     <JournalPage />
     </div>
   );
 }
