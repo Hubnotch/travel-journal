@@ -43,6 +43,16 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+.journal--location span{
+  font-family: Inter;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: 12px;
+letter-spacing: 0.17em;
+text-align: left;
+
+}
 .journal--location a{
   font-weight: normal;
   text-transform: none;
