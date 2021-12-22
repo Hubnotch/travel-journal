@@ -1,28 +1,29 @@
 import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
 import home from '../images/home.jpg'
 import '../App.css'
 
-function Journal() {
+function Journal(props) {
+  let images= home || props.imageUrl
     return (
       <article className="journal">
-        <img src={home} className="journal--image" alt="home" />
+        <img src={images} className="journal--image" alt="home" />
         <section className="journal--details">
           <p className="journal--location">
-            <span>icon</span> JAPAN{" "}
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="icon"/> {props.location}{" "}
             <a
-              href="http://google.com"
+              href={props.MapsUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               View on Google Maps
             </a>
           </p>
-          <h1>Mount Fuji</h1>
-          <h4>12 Jan,2021 - 24 Jan, 2021</h4>
+          <h1>{props.title}</h1>
+          <h4>{props.startDate} - {props.endDate}</h4>
           <p className="journal--text">
-            Mount Fuji is the tallest mountain in Japan, standing at 3,776
-            meters (12,380 feet). Mount Fuji is the single most popular tourist
-            site in Japan, for both Japanese and foreign tourists.
+            {props.description}
           </p>
         </section>
       </article>

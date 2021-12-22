@@ -1,12 +1,13 @@
 import React from 'react'
-import { fontAwesomeIcons } from "@fortawesome/react-fontawesome";
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobeAfrica } from '@fortawesome/free-solid-svg-icons';
 import  "../App.css"
+
 
 function Navbar() {
     return (
         <nav className="navbar">
-           <fontAwesomeIcons icon={faGlobe} />
+        <FontAwesomeIcon icon={faGlobeAfrica} size='2x' className="navbar--icon" />
             <p>my travel journal</p>
         </nav>
     )
